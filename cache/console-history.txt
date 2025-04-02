@@ -1,0 +1,3 @@
+const Upload = await ethers.getContractAt("Upload", "0x5fbdb2315678afecb367f032d93f642f64180aa3")
+await contract.display("0xBcd4042DE499D14e55001CcbB24a551F3b954096")
+await contract.display("YOUR_WALLET_ADDRESS");
