@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.App h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #03e9f4 10%, #9f05ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
+}
+
+.App p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #03e9f4;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+
+.share {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+  color: white;
+  border: 2px solid #03e9f4;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.share:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #03e9f4, 
+              0 0 25px #9f05ff, 
+              0 0 35px rgba(253, 94, 8, 0.7);
+}
+
+
+.choose {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 20px 0;
+  color: #03e9f4;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.choose:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+
+.choose span {
+  position: absolute;
+  display: block;
+}
+
+.choose span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+.choose span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% { top: -100%; }
+  50%, 100% { top: 100%; }
+}
+
+.choose span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+  0% { right: -100%; }
+  50%, 100% { right: 100%; }
+}
+
+.choose span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% { bottom: -100%; }
+  50%, 100% { bottom: 100%; }
+}
+
+
+@media (max-width: 768px) {
+  .App h1 {
+    font-size: 2.5rem;
+  }
+  
+  .share {
+    position: relative;
+    top: 0;
+    left : 0;
+    margin: 10px 0;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.wallet-container {
+  position: relative;
+  width: 350px;
+  margin: 20px auto;
+}
+
+.App p {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(145deg, rgba(62, 81, 181, 0.3) 0%, rgba(42, 82, 152, 0.3) 100%);
+  color: #03e9f4;
+  border-radius: 15px;
+  padding: 15px 20px;
+  border: 2px solid rgba(3, 233, 244, 0.5);
+  text-align: center;
+  transition: all 0.4s ease;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  box-shadow: 
+    0 10px 25px rgba(3, 233, 244, 0.1),
+    0 5px 15px rgba(3, 233, 244, 0.05);
+  overflow: hidden;
+}
+
+.App p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #03e9f4, #9f05ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.App p:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.account-address {
+  display: block;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Courier New', monospace;
+  margin-top: 5px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.App p:hover .account-address {
+  opacity: 1;
+}
+
+.account-address::selection {
+  background: rgba(3, 233, 244, 0.3);
+}
+
+@media (max-width: 768px) {
+  .wallet-container {
+    width: 280px;
+  }
+
+  .App p {
+    font-size: 0.8rem;
+    padding: 12px 15px;
+  }
+}
+
+/* Advanced hover and interaction effects */
+.App p:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 30px rgba(3, 233, 244, 0.2),
+    0 10px 20px rgba(3, 233, 244, 0.1);
+  border-color: #03e9f4;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+.App {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.top-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.top-navigation .title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  background: linear-gradient(135deg, #03e9f4 10%, #9f05ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
+  margin-bottom: 20px;
+}
+.navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+.top-navigation .wallet-container {
+  margin-top: 20px;
+}
+.top-navigation .App p {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(145deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 255, 0.2),
+    0 4px 12px rgba(0, 0, 255, 0.1);
+  border: 2px solid #4a90e2;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin: 0;
+  display: inline-block;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.account-address {
+  font-size: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .top-navigation .title {
+    font-size: 2.5rem;
+  }
+  .navigation-buttons {
+    max-width: 250px;
+  }
+}
